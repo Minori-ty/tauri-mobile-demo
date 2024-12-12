@@ -75,9 +75,14 @@ jobs:
             override: true
             components: rustfmt, clippy
 
+      - name: 安装 NDK
+        run: sdkmanager --install "ndk;21.4.7075529"
+
+      - name: 设置 NDK_HOME
+        run: echo "NDK_HOME=$ANDROID_HOME/ndk/21.4.7075529" >> $GITHUB_ENV
+        
       - name: 打包安卓
         run: |
-          echo "NDK_HOME=$ANDROID_HOME/ndk-bundle" >> $GITHUB_ENV
           npm run tauri android init
           npm run tauri android build --apk
       
