@@ -75,7 +75,7 @@ jobs:
           unzip android-ndk-r27c-linux.zip -d $HOME
 
       - name: 设置 NDK_HOME
-        run: echo "NDK_HOME=$HOME/android-ndk-r27c-linux" >> $GITHUB_ENV
+        run: echo "NDK_HOME=$HOME/android-ndk-r27c" >> $GITHUB_ENV
 
       - name: 启动rust
         uses: actions-rs/toolchain@v1
