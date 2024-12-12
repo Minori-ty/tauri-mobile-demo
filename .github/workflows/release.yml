@@ -70,11 +70,12 @@ jobs:
   
       - name: 安装 NDK
         run: |
-          wget https://dl.google.com/android/repository/android-ndk-r21e-linux-x86_64.zip
-          unzip android-ndk-r21e-linux-x86_64.zip -d $HOME
+          wget https://dl.google.com/android/repository/android-ndk-r27c-linux.zip
+          sudo apt-get install libunwind-dev
+          unzip android-ndk-r27c-linux.zip -d $HOME
 
       - name: 设置 NDK_HOME
-        run: echo "NDK_HOME=$HOME/android-ndk-r21e" >> $GITHUB_ENV
+        run: echo "NDK_HOME=$HOME/android-ndk-r27c-linux" >> $GITHUB_ENV
 
       - name: 启动rust
         uses: actions-rs/toolchain@v1
