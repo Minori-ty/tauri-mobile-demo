@@ -67,9 +67,8 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: 21
-          cache: 'gradle'
 
-      - name: Install latest nightly
+      - name: 启动rust
         uses: actions-rs/toolchain@v1
         with:
             toolchain: nightly
