@@ -77,6 +77,7 @@ jobs:
 
       - name: 打包安卓
         run: |
+          echo "NDK_HOME=$ANDROID_HOME/ndk-bundle" >> $GITHUB_ENV
           npm run tauri android init
           npm run tauri android build --apk
       
