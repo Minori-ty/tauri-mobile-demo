@@ -86,7 +86,7 @@ jobs:
       - name: 打包安卓
         run: |
           npm run tauri android init
-          npm run tauri android build --apk
+          npm run tauri android build --target x86_64-linux-android
       
       # - name: 打包安卓
       #   run: |
@@ -107,4 +107,4 @@ jobs:
         with:
           name: v0.0.7
           tag_name: v0.0.7
-          files: android/app/build/outputs/apk/release/app-release.apk
+          files: src-tauri/gen/android/app/build/outputs/apk/release/app-release.apk
