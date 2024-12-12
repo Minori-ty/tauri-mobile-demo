@@ -86,7 +86,7 @@ jobs:
       - name: 打包安卓
         run: |
           npm run tauri android init
-          npm run tauri android build --target x86_64-linux-android
+          npm run tauri android build -- --apk --target x86_64
       
       # - name: 打包安卓
       #   run: |
